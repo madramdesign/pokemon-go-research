@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="theme-color" content="#0b1018" />
+  <meta name="description" content="Unofficial Pokémon GO companion: keep/transfer, IVs, search strings. No login, no GPS, no automation." />
+  <title>Box Coach</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="icon.svg" />
+  <link rel="icon" href="icon.svg" />
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <img src="icon.svg" alt="" />
+      <div>
+        <h1>Box Coach</h1>
+        <p>Companion notes · not a game client</p>
+      </div>
+    </div>
+    <button class="install-btn" id="installBtn" type="button" hidden>Add to iPhone</button>
+  </header>
+
+  <div class="notice">
+    <strong>Stays on the allowed side of the fairness policy.</strong>
+    This app never logs into Pokémon GO, never reads your location, and never taps the game for you.
+    Official auto-catch/spin is Explorer Gadget or GO Plus+ inside the real app.
+    Live events: <a href="https://leekduck.com/" style="color:#4ecdc4">Leek Duck</a> ·
+    PvP ranks: <a href="https://pvpoke.com/" style="color:#4ecdc4">PvPoke</a>.
+  </div>
+
+  <main>
+    <section id="panel-flow" class="panel active" data-panel="flow">
+      <div class="card flow-top">
+        <h2>Sort on your phone</h2>
+        <p class="lede">Copy → paste in GO → tag or transfer. Setup is on <strong>Tags</strong>. Open the DIY the first time; use Steps when you already know the loop.</p>
+        <div class="filter-switch" role="tablist" aria-label="Flow view">
+          <button type="button" data-flow-view="steps">Steps</button>
+          <button type="button" class="on" data-flow-view="diy">DIY guide</button>
+        </div>
+        <div id="flowChrome" class="hidden">
+          <div class="flow-dots" id="flowDots"></div>
+          <div class="flow-meta" id="flowMeta"></div>
+        </div>
+      </div>
+
+      <div id="diyGuide" class="diy">
+        <article class="card">
+          <h2>What this system is</h2>
+          <p class="lede">You are not cleaning “bad IVs.” You are giving every keeper a <strong>job</strong>, then transferring anything with no job. The star (Favorite) is the only thing that blocks a mass-transfer. Tags do not. Star irreplaceables <em>and</em> tag the ones you will use.</p>
+          <p>Work in two apps: Box Coach (this page) and Pokémon GO storage. Copy here, switch to GO, paste in the search bar, act, switch back. On iPhone: swipe up and hold, tap GO, paste. After the first pin, you can stay in GO and tap the named favorite.</p>
+        </article>
+
+        <article class="card">
+          <h2>Do this once</h2>
+          <h3>1. Create 8 tags in GO</h3>
+          <p>Storage → Tags → + . Type the name exactly. Never name a tag <code>shiny</code>, <code>lucky</code>, or <code>shadow</code> — those are GO keywords. <code>RAID</code> and <code>MEGA</code> are fine; always search them as <code>#RAID</code> and <code>#MEGA</code>.</p>
+          <ul>
+            <li><code>PVP</code> — 1–2 Great/Ultra League copies per species you play. Low Attack, high bulk. Not RAID on this same copy.</li>
+            <li><code>RAID</code> — highest Attack / best Shadow. One winner per species. Do not purify meta Shadows.</li>
+            <li><code>MAX</code> — Dynamax / G-Max you will actually level.</li>
+            <li><code>MEGA</code> — one coverage Mega or Primal you will energy-dump into.</li>
+            <li><code>DEX</code> — one living-dex / costume. This is the only tag that may stack on the PVP or RAID winner.</li>
+            <li><code>TRADE</code> — extras for friends. Never also PVP or RAID.</li>
+            <li><code>WALL</code> — 1–2 gym defenders (Chansey, Blissey, Snorlax…).</li>
+            <li><code>TEMP</code> — dump later (event, showcase). Remove the tag when you transfer.</li>
+          </ul>
+          <p>Default: <strong>one job tag per Pokémon</strong>. Two copies when RAID IVs and PVP IVs disagree (a 15-Atk raid Machamp and a bulk PVP Machamp). Two tags on one copy only for DEX + combat.</p>
+          <h3>2. Pin 12 searches</h3>
+          <p>In GO storage, paste a string, search, then long-press that recent search → Favorite. Rename it to the Box Coach name (WEEK, INBOX, PVPIV…). You get 12 favorites. Unpin anything leftover from older versions (DUPERAID, UL2500 without <code>!#</code>).</p>
+          <p>On the Tags tab: <strong>Name</strong> copies the label, <strong>Copy</strong> copies the string. Do this for all 12, in order 1–12.</p>
+          <h3>3. How to act on a list in GO</h3>
+          <ol>
+            <li>Paste (or tap the pin) in the search bar. The list filters live.</li>
+            <li>Long-press one Pokémon until the checkboxes appear.</li>
+            <li>Tap more copies, or Select all only if you have scrolled the whole list.</li>
+            <li>Bottom menu: <strong>Tag</strong> (job), <strong>Favorite</strong> (star), <strong>Transfer</strong>, or <strong>Evolve</strong>.</li>
+            <li>Clear the search (X) before the next pin so you do not stack filters by accident.</li>
+          </ol>
+        </article>
+
+        <article class="card">
+          <h2>Rules that save you from mistakes</h2>
+          <ul>
+            <li><code>!#</code> = no custom tag. Hunts hide tagged copies so the same Chikorita does not come back.</li>
+            <li><code>evolve</code> = enough candy (and items) to evolve <em>right now</em>, not “fully evolved.” A Chikorita with &lt;25 candy matches <code>!evolve</code>.</li>
+            <li>The <code>+</code> family prefix only works at the start of a search or after a comma. That is why GL1500 and EVOCD put family names first.</li>
+            <li>GO truncates at ~200 characters. Do not add extra families onto GL1500.</li>
+            <li>Low Attack + high Defense/HP is a <em>screen</em>, not PvPoke rank-1. Skip species you will not play. Confirm on PvPoke before XL.</li>
+            <li>Never name a search pin the same as a job tag in a confusing way: the gold chip <code>PVPIV</code> is a search name; the tag on the Pokémon is <code>PVP</code>.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>Step 1 — This week’s pile</h2>
+          <p class="lede">Pin WEEK. After a walk or Spotlight, this is the only list you need. INBOX is the same idea for the whole box (first cleanup, or when WEEK looks empty but storage is still full).</p>
+          <ol>
+            <li>Copy WEEK → paste in GO. You should see only Pokémon caught in the last 7 days that have <em>no</em> job tag.</li>
+            <li>Scroll once. Star every shiny, 4★, lucky, legendary, mythical, costume, and anything you have already powered or Maxed. Star first. Tagging without a star can still be mass-transferred later if you untag.</li>
+            <li>Still in this list, tag obvious jobs as you go:
+              <ul>
+                <li>Dynamax / G-Max you will use → <code>MAX</code></li>
+                <li>A Mega you will actually energy → <code>MEGA</code></li>
+                <li>Costume / living-dex copy → <code>DEX</code> (can also sit on a PVP or RAID winner)</li>
+                <li>Spare legendary for a friend → <code>TRADE</code></li>
+                <li>Gym wall → <code>WALL</code></li>
+                <li>Not sure, but not candy today → <code>TEMP</code></li>
+              </ul>
+            </li>
+            <li>Leave junk untagged. Do not tag “maybe PVP” yet — that is Step 2.</li>
+            <li>When the list is only stuff you are willing to turn into candy (or empty of keepers), tap Next.</li>
+          </ol>
+          <p>If this is your first time ever, run INBOX instead of WEEK so old untagged Pokémon get the same pass.</p>
+          <button type="button" class="ghost diy-jump" data-diy-goto="0">Open Step 1 with copy buttons</button>
+        </article>
+
+        <article class="card">
+          <h2>Step 2 — Tag PVP</h2>
+          <p class="lede">Two pins, both untagged-only. After you tag a copy <code>PVP</code>, it disappears from both lists. That is the point.</p>
+          <h3>PVPIV first</h3>
+          <ol>
+            <li>Copy PVPIV. Paste. This is every untagged Pokémon with Attack IV 0–5 and Defense/HP 11–15.</li>
+            <li>This list is noisy. Skip anything you will not play in Great or Ultra League (Rattata, random first-stages, stuff you hate using).</li>
+            <li>Skip Chikorita / Bayleef unless you actually want a Meganium. Same idea for every baby/first stage.</li>
+            <li>Per species you <em>will</em> play: pick the best 1–2 bulk spreads. Long-press → Tag → PVP. Leave extras untagged.</li>
+            <li>Do not also tag that copy RAID. If the same species has a 15-Attack raid winner, that is a second Pokémon in Step 3.</li>
+            <li>Do not power up yet. Great League must stay ≤ 1,500 CP. Check the IVs tab or PvPoke before XL.</li>
+          </ol>
+          <h3>GL1500 second</h3>
+          <ol>
+            <li>Copy GL1500. This is the same IV idea, but only common Great League families (Azumarill, Medicham, Swampert, and the rest on the pin), CP ≤ 1,500, still untagged.</li>
+            <li>Tag PVP on the winner if you did not already. If the list is empty, you already tagged them in PVPIV — good.</li>
+            <li>Ultra League: do not pin UL2500 unless you play UL every week. Type it from the Search tab when you need it: untagged, CP 1,501–2,500, same bulk IVs.</li>
+          </ol>
+          <button type="button" class="ghost diy-jump" data-diy-goto="1">Open Step 2 with copy buttons</button>
+        </article>
+
+        <article class="card">
+          <h2>Step 3 — Tag RAID</h2>
+          <p class="lede">Raids want <strong>15 Attack</strong>, not PvP bulk. Shadow of a meta attacker beats a non-shadow hundo. Do not purify by default.</p>
+          <h3>RAID15</h3>
+          <ol>
+            <li>Copy RAID15. Untagged 15-Attack 3★ and 4★.</li>
+            <li>One winner per species — not six 15-Atk Rhydon. Tag RAID on the best (highest CP / already evolved / Shadow if you have one).</li>
+            <li>If a worse copy is already tagged RAID from last week, open <code>#RAID</code> later and untag the loser.</li>
+          </ol>
+          <h3>SHADATK</h3>
+          <ol>
+            <li>Copy SHADATK. Every untagged Shadow.</li>
+            <li>Meta (Mewtwo, Machamp, Metagross, Mamoswine, Rayquaza, Garchomp, Dragonite…) → Tag RAID. Keep Frustration until a Rocket TM window.</li>
+            <li>Junk Shadows (Pidgey, Whismur, random 1★) → leave untagged. They become candy in Step 5. Do not purify them “to save.”</li>
+          </ol>
+          <h3>FRUST</h3>
+          <ol>
+            <li>Copy FRUST when a Rocket event is on, or if SHADATK was huge.</li>
+            <li>This is untagged Shadows that still know Frustration. Tag RAID on the meta ones you missed. Skip the rest.</li>
+          </ol>
+          <button type="button" class="ghost diy-jump" data-diy-goto="2">Open Step 3 with copy buttons</button>
+        </article>
+
+        <article class="card">
+          <h2>Step 4 — Evolve tagged only</h2>
+          <p class="lede">Candy is the scarce resource. You evolve the tagged winner, never the untagged extra sitting next to it with 124 candy.</p>
+          <ol>
+            <li>Copy EVOTAG. This is RAID / PVP / DEX / MEGA / MAX that can evolve <em>right now</em> (enough candy).</li>
+            <li>Skip Little Cup PVP copies (you wanted them unevolved). If you tagged one by mistake, untag or skip it in this list.</li>
+            <li>Evolve from this list only. Queue a few, don’t select-all if the list is mixed.</li>
+            <li>Community Day: Copy EVOCD instead (or after). That is those CD families <em>and</em> already tagged RAID or PVP. Untagged extras in the same family will not appear — that is how you avoid evolving the junk Marshtomp.</li>
+            <li>If EVOTAG is empty, you either have no candy or everything is already final form. That is fine. Power-up and second moves are not this step — do those on <code>#PVP</code> / <code>#RAID</code> later from the Search tab.</li>
+          </ol>
+          <button type="button" class="ghost diy-jump" data-diy-goto="3">Open Step 4 with copy buttons</button>
+        </article>
+
+        <article class="card">
+          <h2>Step 5 — Transfer leftovers</h2>
+          <p class="lede">If it still has no star and no job tag, it is candy. Scroll every list. There is no undo.</p>
+          <ol>
+            <li><strong>EXTRAS</strong> — untagged extras of a species you already own two of, and not Favorited. These are the duplicates of a winner you already tagged. Transfer.</li>
+            <li><strong>AGE07</strong> — this week’s leftovers that are not 3★/4★, not shiny/shadow/lucky/legendary, not starred, not tagged. Spotlight / CD chaff. Still eyeball costumes and anything you like.</li>
+            <li><strong>DUMP</strong> — only if storage is still tight. Hides 4★, shiny, shadow, legendary, mythical, lucky, costume, background, Dynamax, G-Max, favorites, and tagged. Whatever remains is the aggressive pile. Scroll it. Then transfer.</li>
+            <li>Never use DUMP3 until PVP tags exist. It hides 3★ and will delete Great League rank-1s.</li>
+            <li>Never Select all on a transfer list you have not scrolled. One starred legendary with a failed tag is enough to ruin the night.</li>
+          </ol>
+          <p>When you are done, INBOX (<code>!#</code>) should be a short list of “I have not decided.” Tag TEMP or star those. A clean box is: starred, tagged, or gone.</p>
+          <button type="button" class="ghost diy-jump" data-diy-goto="4">Open Step 5 with copy buttons</button>
+        </article>
+
+        <article class="card">
+          <h2>After the sort (not every session)</h2>
+          <ul>
+            <li>Second charged move on PVP before you dump XL: Search tab → PVP2MV (<code>#PVP&amp;!@3move</code>).</li>
+            <li>Power RAID that cannot evolve further: PWRRAID.</li>
+            <li>Confirm a PVP spend on <a href="https://pvpoke.com/" style="color:#4ecdc4">PvPoke</a>. Species choice beats IV rank.</li>
+            <li>Stuck on one Pokémon: use the wizard at the bottom of Steps.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>If the list looks wrong</h2>
+          <ul>
+            <li><strong>Same Pokémon as last search</strong> — the pin is missing <code>!#</code>. Re-Copy from Tags. After you tag, they should vanish.</li>
+            <li><strong>Chikorita on a Great League search</strong> — PVPIV is every bulk IV. Skip it. GL1500 should not include Chikorita (not a core family). If it does, you pasted the old CP-only string.</li>
+            <li><strong>GL1500 shows whole families with bad IVs</strong> — you put <code>+</code> after <code>&amp;</code>. Re-Copy GL1500; families must come first.</li>
+            <li><strong>EVOCD evolves extras</strong> — old string had no <code>#RAID,#PVP</code>. Re-Copy EVOCD.</li>
+            <li><strong>Search named RAID shows raid-caught Pokémon</strong> — type <code>#RAID</code> for the tag. The word <code>raid</code> means caught in a raid.</li>
+            <li><strong>Nothing in WEEK</strong> — everything from this week is already tagged, or you have not caught in 7 days. Use INBOX.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div id="flowStep" class="hidden"></div>
+      <div class="flow-nav hidden" id="flowNav">
+        <button type="button" class="ghost" id="flowBack">Back</button>
+        <button type="button" class="primary" id="flowNext" style="width:auto;flex:1">Next</button>
+      </div>
+      <div class="card hidden" id="wizCard">
+        <h2>Stuck on one Pokémon?</h2>
+        <p class="lede">Only if the list is mixed.</p>
+        <div class="progress"><i id="wizBar"></i></div>
+        <div id="wizStep"></div>
+      </div>
+    </section>
+
+    <section id="panel-tags" class="panel" data-panel="tags">
+      <div class="card">
+        <h2>Create these 8 tags</h2>
+        <p class="lede">Storage → Tags → Add. Never name a tag shiny, lucky, or shadow. RAID / MEGA: always search #RAID and #MEGA.</p>
+        <div id="jobTags"></div>
+      </div>
+      <div class="card">
+        <h2>Favorite these 12 searches</h2>
+        <p class="lede">Long-press a recent search in GO to pin. Name copies the label; Copy pastes the string. Under 200 characters. Re-pin if you still have the old strings.</p>
+        <div id="pinSearches"></div>
+      </div>
+    </section>
+
+
+    <section id="panel-ivs" class="panel" data-panel="ivs">
+      <div class="card">
+        <h2>IV &amp; league CP</h2>
+        <p class="lede">Type the appraisal IVs from the official app. Rank is stat-product at the CP cap — confirm on PvPoke before you spend XL.</p>
+        <label for="species">Species</label>
+        <input id="species" type="search" placeholder="Azumarill, Shadow Mewtwo, Tinkaton…" autocomplete="off" />
+        <div id="suggest" class="suggest hidden"></div>
+        <div class="iv-grid" style="margin-top:10px">
+          <div class="iv-box"><label for="ivA">Attack</label><input id="ivA" type="number" min="0" max="15" value="15" /></div>
+          <div class="iv-box"><label for="ivD">Defense</label><input id="ivD" type="number" min="0" max="15" value="15" /></div>
+          <div class="iv-box"><label for="ivS">HP</label><input id="ivS" type="number" min="0" max="15" value="15" /></div>
+        </div>
+        <div id="ivOut" style="margin-top:12px"></div>
+      </div>
+      <div class="card">
+        <h2>IV floors (source)</h2>
+        <p class="lede">Wild 0 · weather 4 · raids/eggs/research 10 · shadow raids 6 · lucky 12 · purify +2 and level 25. A 10/10/10 legendary is never Great League rank 1 on a species that wants 0 Attack.</p>
+      </div>
+    </section>
+
+    <section id="panel-search" class="panel" data-panel="search">
+      <div class="card">
+        <h2>Paste into storage search</h2>
+        <div class="filter-switch" role="tablist" aria-label="Search type">
+          <button type="button" class="on" data-filter-tab="pins">12 pins</button>
+          <button type="button" data-filter-tab="tag">Tag</button>
+          <button type="button" data-filter-tab="transfer">Transfer</button>
+          <button type="button" data-filter-tab="evolve">Evolve</button>
+        </div>
+        <p class="lede" id="filterHint"></p>
+        <div id="filters"></div>
+      </div>
+    </section>
+
+    <section id="panel-types" class="panel" data-panel="types">
+      <div class="card">
+        <h2>Type matchup</h2>
+        <p class="lede">Pick the defender’s types (one or two). Super-effective is what you want on a raid team.</p>
+        <div id="typePicks" class="type-picks"></div>
+        <div id="typeOut" style="margin-top:12px"></div>
+      </div>
+      <div class="card">
+        <h2>Weather boosts</h2>
+        <div id="weather"></div>
+      </div>
+    </section>
+
+    <section id="panel-week" class="panel" data-panel="week">
+      <div class="card">
+        <h2>This week (1 Sep 2026 notes)</h2>
+        <p class="lede">Mega Finale 5–6 Sep. Forever Forward ends 8 Sep. Twilight Trails / GBL Season 28 starts 8 Sep 1:00 p.m. PDT. Recheck Leek Duck before you leave the house.</p>
+        <div class="check"><input type="checkbox" /><span>Daily gifts + Field Research + Adventure Incense (while walking)</span></div>
+        <div class="check"><input type="checkbox" /><span>Spin a gym for the free pass — spend it on a raid you care about</span></div>
+        <div class="check"><input type="checkbox" /><span>Buddy hearts (feed, snapshot, play, walk)</span></div>
+        <div class="check"><input type="checkbox" /><span>5 GBL sets if you are climbing (10 on Battle Thursday)</span></div>
+        <div class="check"><input type="checkbox" /><span>50 km Adventure Sync by Monday</span></div>
+      </div>
+      <div class="card">
+        <h2>Official ways to play with the phone in your pocket</h2>
+        <p class="lede">If you wanted automation, use what the publisher ships: <strong>Explorer Gadget</strong> (level 20+, Poké Balls only, daily caps, cannot run with Plus+) or <strong>Pokémon GO Plus+</strong>. Those stay inside the official app. Third-party clickers, GPS joysticks, and modified clients are how accounts get the three-strike ban.</p>
+      </div>
+      <div class="card">
+        <h2>Competitive habits</h2>
+        <p class="lede">Play the event calendar. Finish one Great League team (two charged moves) before you dump Stardust into random 3-stars. Shadows: do not purify meta attackers. Species choice beats IV rank.</p>
+      </div>
+      <div class="card">
+        <h2>Live tools (external)</h2>
+        <div class="links">
+          <a href="https://leekduck.com/" target="_blank" rel="noopener">Leek Duck — events, bosses, research</a>
+          <a href="https://pvpoke.com/" target="_blank" rel="noopener">PvPoke — rankings and team builder</a>
+          <a href="https://www.pokebattler.com/" target="_blank" rel="noopener">Pokebattler — raid estimator</a>
+          <a href="https://niantic.helpshift.com/hc/en/34-campfire/" target="_blank" rel="noopener">Campfire — official raid groups</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <nav class="tabs" aria-label="Sections">
+    <button type="button" class="on" data-tab="flow"><small>↻</small>Flow</button>
+    <button type="button" data-tab="tags"><small>#</small>Tags</button>
+    <button type="button" data-tab="ivs"><small>✦</small>IVs</button>
+    <button type="button" data-tab="search"><small>⌕</small>Search</button>
+    <button type="button" data-tab="week"><small>✓</small>Week</button>
+  </nav>
+
+  <div id="installSheet" class="sheet hidden">
+    <div class="inner">
+      <h3>Put this on your Home Screen</h3>
+      <p class="lede">Safari on iPhone — this is a web app, not an App Store binary (those need an Apple developer account).</p>
+      <ol>
+        <li>Tap the Share button.</li>
+        <li>Scroll to <strong>Add to Home Screen</strong>.</li>
+        <li>Open Box Coach from the icon. It runs full-screen, offline after the first load.</li>
+      </ol>
+      <button class="primary" type="button" id="closeSheet" style="margin-top:14px">Got it</button>
+    </div>
+  </div>
+
+  <script src="js/app.js" type="module"></script>
+</body>
+</html>
