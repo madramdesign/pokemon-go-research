@@ -1,7 +1,7 @@
 # In-game filters by keep job
 
-**Snapshot date:** 1 September 2026  
-**Pairs with:** [what-pokemon-to-keep.md](what-pokemon-to-keep.md)
+**Snapshot date:** 1 September 2026 · **accuracy check:** 10 September 2026  
+**Pairs with:** [what-pokemon-to-keep.md](what-pokemon-to-keep.md) · live pins in [Box Coach](https://madramdesign.github.io/pokemon-go-research/companion/)
 
 These are **high-level storage searches**, not species lists. Paste them in the Pokémon search bar. Pin the ones you use weekly. Tag keepers first; transfer last.
 
@@ -51,7 +51,7 @@ Do **not** name a tag the same as a keyword (`shiny`, `lucky`, `shadow`, `raid`,
 | `NUNDO` | `0attack&0defense&0hp` |
 | `INVEST` | `dynamax,gigantamax,mega1,mega2,mega3,shadow&@frustration,adventureeffect` |
 | `PVPIV` | `0-1attack&3-4defense&3-4hp` |
-| `GL1500` | `cp-1500&0-1attack&3-4defense&3-4hp` |
+| `GL1500` | Box Coach pin (families + IVs, ≤200 chars): `+azumarill,+medicham,+swampert,+whiscash,+altaria,+skarmory,+lanturn,+clodsire,+jellicent,+empoleon,+tinkaton,+lickitung,+forretress,+mimikyu,+corviknight&!#&cp-1500&0-1attack&3-4defense&3-4hp` — or the short hunt `cp-1500&0-1attack&3-4defense&3-4hp` |
 | `UL2500` | `cp-2500&0-1attack&3-4defense&3-4hp` |
 | `MLIV` | `legendary,mythical,ultrabeast&3*,4*` |
 | `PVP2MV` | `#PVP&!@3move` |
@@ -65,8 +65,8 @@ Do **not** name a tag the same as a keyword (`shiny`, `lucky`, `shadow`, `raid`,
 | `OLD20` | `2016,2017,2018,2019,2020&!favorite` |
 | `WALLS` | `+chansey,+snorlax,+giratina,+togepi` |
 | `NOTAG` | `!#` |
-| `DUMP` | `!4*&!shiny&!shadow&!legendary&!mythical&!lucky&!costume&!background&!favorite&!#` |
-| `AGE07` | `age0-7&!3*&!4*&!shiny&!shadow&!favorite&!#` |
+| `DUMP` | `!4*&!shiny&!shadow&!legendary&!mythical&!lucky&!costume&!background&!dynamax&!gigantamax&!favorite&!#` |
+| `AGE07` | `age0-7&!3*&!4*&!shiny&!shadow&!lucky&!legendary&!favorite&!#` |
 
 After a cleanup, keepers should be **Favorite, a job tag, or both**. Untagged = review pile.
 
@@ -299,7 +299,7 @@ Tag 1–2 walls `WALL`. IVs barely matter compared to “is it still in the gym.
 **Safe-ish mass-transfer view:**
 
 ```
-!4*&!shiny&!shadow&!legendary&!mythical&!lucky&!costume&!background&!favorite&!#
+!4*&!shiny&!shadow&!legendary&!mythical&!lucky&!costume&!background&!dynamax&!gigantamax&!favorite&!#
 ```
 
 **More aggressive** (also hides 3-stars — **this will delete Great League rank-1s**. Only use after you already tagged PvP candidates):
@@ -311,7 +311,7 @@ Tag 1–2 walls `WALL`. IVs barely matter compared to “is it still in the gym.
 **This week’s junk** (Community Day / Spotlight leftovers):
 
 ```
-age0-7&!3*&!4*&!shiny&!shadow&!favorite&!#
+age0-7&!3*&!4*&!shiny&!shadow&!lucky&!legendary&!favorite&!#
 ```
 
 **Low-CP candy:**

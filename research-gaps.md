@@ -1,7 +1,7 @@
 # Research gaps — what these docs still under-cover
 
-**Audit date:** 1 September 2026 (revised after the second research pass)  
-**Audited docs:** [pokemon-go-overview.md](pokemon-go-overview.md), [what-pokemon-to-keep.md](what-pokemon-to-keep.md), [how-to-win-competitive.md](how-to-win-competitive.md)
+**Audit date:** 10 September 2026 (accuracy pass)  
+**Audited docs:** [pokemon-go-overview.md](pokemon-go-overview.md), [what-pokemon-to-keep.md](what-pokemon-to-keep.md), [how-to-win-competitive.md](how-to-win-competitive.md), [in-game-filters.md](in-game-filters.md), [companion/](companion/index.html)
 
 A first draft plus a merge from four deep-dive briefs closed a lot of 2025–2026 holes (Explorer Gadget, Daily Discoveries, Community Campsites, Hyper Training, Mimikyu, Twilight Trails, GO Pass/Giovanni, HOME traps, Silph shutdown). This file is now the **remaining** list, not the original one.
 

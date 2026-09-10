@@ -1,10 +1,10 @@
 # Pokémon GO overview
 
-**Snapshot date:** 1 September 2026 (updated after a second research pass the same day)  
+**Snapshot date:** 1 September 2026 · **accuracy check:** 10 September 2026  
 **Scope:** How the game works, what systems matter, and how a typical trainer spends a week.  
 **Not this doc:** Keep-vs-transfer rules ([what-pokemon-to-keep.md](what-pokemon-to-keep.md)) or a competitive playbook ([how-to-win-competitive.md](how-to-win-competitive.md)).
 
-**Live this week:** Mega Ascension (31 Aug–4 Sep) → GO Fest 2026 Mega Finale (5–6 Sep). Daily Discoveries / Raid Hour / Spotlight Hour are typically **paused** through 6 Sep. **Forever Forward ends 8 Sep 10:00 local.** **Twilight Trails** starts 8 Sep and runs to **1 Dec 2026**.
+**Live now (10 Sep 2026):** **Twilight Trails** (8 Sep–1 Dec 2026). GBL **8–15 Sep**: Great / Ultra / Master Mega Edition + 4× win Stardust. Community Day Classic **12 Sep**. Daily Discoveries are back on (Max Monday, Showcase Tuesday, Raid Hour Wed, GBL Thursday, etc.).
 
 Pokémon GO is a live location-based game. You walk the real world, catch Pokémon, spin PokéStops and Gyms, and team up for raids, Max Battles, and GO Battle League. Ten years in, it is less a simple catch-em-all app and more a stack of overlapping systems: catching, combat, social, events, and a real-money economy.
 
@@ -121,7 +121,7 @@ These are the currencies that actually gate progress:
 | **Rare Candy / Rare Candy XL** | Convert to any species’ candy | Raids, GBL, research, Adventure Sync |
 | **PokéCoins** | Storage, raid passes, incubators, boxes | Gym defense (cap **50/day**) or real money |
 | **Raid / Remote / Premium passes** | Raids | Free daily Gym spin; shop; events |
-| **Max Particles** | Max Battles | Power Spots, walking; daily soft cap historically ~800 |
+| **Max Particles** | Max Battles | Power Spots, walking; soft cap raised (community: ~1,000 → **1,500** in May 2025 — confirm in-game) |
 | **Mega / Primal Energy** | Mega Evolve / Primal Reversion | Mega/Primal raids, walking a mega-capable buddy after first mega |
 | **TMs / Elite TMs** | Change moves | Raids, GBL, events. Elite TMs teach exclusive/legacy moves |
 
@@ -182,7 +182,7 @@ Remote 3v3 trainer battles. Leagues:
 
 Weekly **themed cups** rotate beside the open leagues. **Mega Editions** (new in 2026) allow Megas; in GL/UL Mega CP is temporarily reduced for the battle.
 
-**Season 27** (*Forever Forward*) runs **2 June–8 September 2026**. **Season 28** (*Twilight Trails*) starts **8 September 2026, 1:00 p.m. PDT**. Rank structure is commonly Ranks 1–20 by battles/wins, then Ace 2000 / Veteran 2500 / Expert 2750 / Legend 3000. Serebii’s Season 27 table lists Rank 21/22/23 at 2000/2500/3000 and omits Expert — **trust the in-game Battle screen**.
+**Season 28** (*Twilight Trails*) is live **8 September–1 December 2026** (GBL opened 8 Sep 1:00 p.m. PDT). Week of **8–15 Sep**: Great / Ultra / Master Mega Edition + 4× win Stardust. Rank structure is commonly Ranks 1–20 by battles/wins, then Ace 2000 / Veteran 2500 / Expert 2750 / Legend 3000. Wiki tables conflict — **trust the in-game Battle screen**.
 
 Daily volume: **5 sets × 5 = 25**. **GO Battle Thursday:** **10 sets / 50 battles** and up to **4× Stardust on win rewards**. GBL Timed Research each season can award Elite TMs for battle/win milestones.
 

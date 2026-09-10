@@ -1,6 +1,6 @@
 # What Pokémon to keep (and what to transfer)
 
-**Snapshot date:** 1 September 2026 (updated after a second research pass the same day)  
+**Snapshot date:** 1 September 2026 · **accuracy check:** 10 September 2026  
 **One rule:** keep by **job**, not by star rating. A 15/15/15 is not automatically a keeper. A 0-attack 3-star of a Great League species often is.
 
 Transfers cannot be undone. Tag or Favorite first, transfer last.
@@ -226,7 +226,7 @@ Goal: never transfer a keeper by accident.
 6. Safe-ish mass-transfer view (still eyeball it):
 
    ```
-   !4*&!shiny&!shadow&!legendary&!mythical&!lucky&!favorite&!#
+   !4*&!shiny&!shadow&!legendary&!mythical&!lucky&!costume&!background&!dynamax&!gigantamax&!favorite&!#
    ```
 
 After Community Day, restrict to recent catches: `age0-7`.

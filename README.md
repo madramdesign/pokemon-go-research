@@ -1,6 +1,6 @@
 # Pokémon GO research notes
 
-Research compiled **1 September 2026**. Game systems, raid bosses, and GO Battle League metas change often. Treat species lists as dated snapshots, not forever-true rankings.
+Research last accuracy-checked **10 September 2026**. Game systems, raid bosses, and GO Battle League metas change often. Treat species lists as dated snapshots, not forever-true rankings.
 
 ## View on mobile
 
@@ -46,6 +46,6 @@ Live calendars and meta tools (not “research markdown”) still live off-GitHu
 
 Official publisher branding has moved from Niantic Games to **Scopely Explore** (acquisition completed May 2025; team rebrand July 2026). Trainer level cap is **80**. Pokémon combat level is still **50** (51 with Best Buddy).
 
-**This week (1 Sep 2026):** Mega Ascension / GO Fest Mega Finale (5–6 Sep). **Forever Forward / GBL Season 27 ends 8 Sep.** **Twilight Trails** (season 28) starts 8 Sep and runs through 1 Dec 2026.
+**Live now (10 Sep 2026):** **Twilight Trails** (through 1 Dec 2026). GBL week **8–15 Sep** is Great / Ultra / Master **Mega Edition** with 4× win Stardust. Community Day Classic **12 Sep**. Recheck [Leek Duck](https://leekduck.com/) before you leave the house.
 
 Always confirm event details on [pokemongo.com](https://pokemongo.com/) and [Leek Duck](https://leekduck.com/). The Silph Road web tools (silph.gg, nest atlas) shut down in 2023 — use Leek Duck, PvPoke, PokéGenie, and Campfire instead.

@@ -1,6 +1,6 @@
 # How to win and be competitive at Pokémon GO
 
-**Snapshot date:** 1 September 2026  
+**Snapshot date:** 1 September 2026 · **accuracy check:** 10 September 2026  
 **This is a philosophy guide**, not a paste-the-team list. Teams expire. Habits do not.
 
 “Competitive” in Pokémon GO is several different games that share a box of Pokémon:
@@ -77,7 +77,7 @@ Leagues: Great 1500 / Ultra 2500 / Master uncapped / cups / Little 500 / **Mega 
 
 **GBL vs Championship Series:** GBL is the in-game ladder. Play! Pokémon is the tournament circuit (**show 6 / pick 3**, Bo3/Bo5). 2026 Worlds (28–30 Aug, San Francisco) used **Great League** and the **pre-June-23 battle system** via Competitors Cup. Mimikyu was **banned** from that cup. Mega-eligible at 2026 LAIC, but **not** in the GBL “2026 GO LAIC Cup” clone. Official: [Twilight Trails](https://pokemongolive.com/en/news/go-battle-league-twilight-trails), [Trainer Battle Update](https://pokemongolive.com/en/news/pvp-updates-competitors-cup-2026).
 
-**Season 27** (*Forever Forward*) **ends 8 Sep 2026**. **Season 28** (*Twilight Trails*) starts **8 Sep 2026, 1:00 p.m. PDT** (ranks reset). Rank thresholds: Ace 2000 / Veteran 2500 / Expert 2750 / Legend 3000 (Serebii omits Expert — trust in-game).
+**Season 28** (*Twilight Trails*) is live **8 Sep–1 Dec 2026** (GBL opened 8 Sep 1:00 p.m. PDT; ranks reset at season start). Week of **8–15 Sep**: Great / Ultra / Master Mega Edition + 4× win Stardust. Rank thresholds: Ace 2000 / Veteran 2500 / Expert 2750 / Legend 3000 (confirm in-game — wiki tables conflict).
 
 ### 3.2 Team roles (build this, not three random “good” Pokémon)
 
@@ -235,11 +235,11 @@ F2P competitive is real in **Great League** and in raids if you have a local gro
 
 ---
 
-## 9. Meta snapshot (will rot — 1 Sep 2026)
+## 9. Meta snapshot (will rot — last full fetch 1 Sep 2026; season live 10 Sep)
 
-Re-check [PvPoke](https://pvpoke.com/) after **8 Sep** (Twilight Trails reset + large move patch + Mega Editions as a standing GBL feature).
+Re-check [PvPoke](https://pvpoke.com/) — Twilight Trails opened with Mega Editions and a move patch. Rankings below are a **pre-/early-season photograph**, not this week’s gospel.
 
-**Calendar:** Now–8 Sep = Season 27 Mega Edition, 4× win Stardust. 8 Sep 1:00 p.m. PDT = Season 28 *Twilight Trails*. Cups this season include Willpower, Retro, Mega Color, Little Cup, Fantasy, Mega Halloween, 2026 GO LAIC Cup, Mega Catch Cup.
+**Calendar (official):** 8–15 Sep Mega Editions (all three) + 4× win Stardust. Later weeks rotate Willpower, Retro, Mega Color, Little Cup (13–20 Oct on GO Hub), Fantasy, Mega Halloween, LAIC Cup, Mega Catch Cup through 1 Dec.
 
 **Great League** ([PvPoke overall](https://pvpoke.com/rankings/all/1500/overall/)): Lickilicky, Tinkaton, Altaria, Empoleon, Mimikyu, then Shadow Altaria / Empoleon / Quagsire, Jellicent, Forretress, Ninetales, Cramorant, Feraligatr, Galarian Corsola, Jumpluff, Clodsire, Corviknight. Azumarill is still on the list (~#24) but is **not** the format-defining pig it used to be.
 
@@ -255,11 +255,12 @@ Philosophy of this snapshot: Fairy / Steel / Normal-bulk / Ghost is the GL/UL gr
 
 ## 10. A one-page competitive checklist
 
-**This week**
+**This week (as of 10 Sep 2026)**
 
 - [ ] Read Leek Duck for bosses, research, and GBL cups
 - [ ] Daily Discovery plan (Max Monday / Showcase Tuesday / Raid Hour / GBL Thursday)
-- [ ] Mega Finale (5–6 Sep) then Twilight Trails reset (8 Sep)
+- [ ] Community Day Classic **12 Sep**
+- [ ] Mega Edition GBL practice if you have Super Max / Mega projects
 - [ ] 50 km Adventure Sync on track
 - [ ] Gifts + one Special Trade if it rerolls something that matters
 - [ ] Rocket Leaders if you need Shadows / 12 km eggs
