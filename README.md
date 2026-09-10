@@ -4,8 +4,9 @@ Research compiled **1 September 2026**. Game systems, raid bosses, and GO Battle
 
 ## View on mobile
 
-- **Guides:** open this repo on GitHub and tap any `.md` file — GitHub’s mobile site renders them.
-- **Box Coach app:** if GitHub Pages is enabled, use the Pages URL for `/companion/` (Install / Add to Home Screen works as a lightweight PWA).
+- **Repo:** https://github.com/madramdesign/pokemon-go-research  
+- **Guides:** open the repo on GitHub (or this README) and tap any `.md` file — GitHub’s mobile site renders them.
+- **Box Coach app:** https://madramdesign.github.io/pokemon-go-research/companion/ (or the [site home](https://madramdesign.github.io/pokemon-go-research/)). Install / Add to Home Screen works as a lightweight PWA once Pages finishes building.
 
 ## Similar projects on GitHub
 
